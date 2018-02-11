@@ -3,6 +3,12 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "+TKtBzv23ywvmmqRiGEjUba4YmI=",
+			"path": "github.com/dgrijalva/jwt-go",
+			"revision": "dbeaa9332f19a944acb5736b4456cfcc02140e29",
+			"revisionTime": "2017-10-19T21:57:19Z"
+		},
+		{
 			"checksumSHA1": "QeKwBtN2df+j+4stw3bQJ6yO4EY=",
 			"path": "github.com/gin-contrib/sse",
 			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
@@ -39,10 +45,10 @@
 			"revisionTime": "2018-01-25T21:43:03Z"
 		},
 		{
-			"checksumSHA1": "3lRPdtZzZ1T4o1penJKGxt1A5ck=",
+			"checksumSHA1": "DAbU2vv0FE1BW5ttLURvWxpukxE=",
 			"path": "github.com/jinzhu/gorm",
-			"revision": "ca46ec0770003aab3c0ed7d7b336643362221c21",
-			"revisionTime": "2018-01-31T10:22:30Z"
+			"revision": "c0359226dc500354fd8c18366ad2fb6616f8c322",
+			"revisionTime": "2018-02-10T11:31:55Z"
 		},
 		{
 			"checksumSHA1": "VIp1lZm6joWhlNdwhady8u//qRw=",
@@ -55,6 +61,12 @@
 			"path": "github.com/mattn/go-isatty",
 			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
 			"revisionTime": "2017-11-07T05:05:31Z"
+		},
+		{
+			"checksumSHA1": "5QKvAdxb0E47Nzn7iI25AfgAvOI=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "be8372ae8ec5c6daaed3cc28ebf73c54b737c240",
+			"revisionTime": "2018-02-02T15:35:43Z"
 		},
 		{
 			"checksumSHA1": "D0VGn6FOqysEqjuD5y0hJOdcrkY=",

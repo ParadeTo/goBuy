@@ -1,9 +1,10 @@
-package test
+package db
 
 import (
 	"testing"
 	"goBuy/config"
 	"goBuy/db"
+	"github.com/stretchr/testify/assert"
 )
 
 type Users struct {
@@ -12,11 +13,9 @@ type Users struct {
 }
 
 func TestConn(t *testing.T) {
-	config.Load("config_test.yaml")
+	config.Load("config_test.yml")
 	db.Connect(config.Conf.Mysql)
 	user := Users{}
 	db.MysqlConns["default"].First(&user)
-	if user.Name != "test" {
-		t.Error("Connect error")
-	}
+	assert.Equal(t, user.Name, "test")
 }

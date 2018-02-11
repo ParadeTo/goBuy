@@ -38,6 +38,7 @@ func main() {
 		c.Set("data", gin.H{"name": "youxingzhi"})
 	})
 
+
 	r.Use(func(context *gin.Context) {
 		fmt.Println("This will not execute if path (/test) match successfully")
 	})

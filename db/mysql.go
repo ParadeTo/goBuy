@@ -10,7 +10,7 @@ import (
 var MysqlConns = make(map[string]*DB)
 
 // Usage:
-// 	config.Load("config_test.yaml")
+// 	config.Load("config_test.yml")
 //  db.Connect(config.Conf.Mysql)
 //  db.MysqlConns["default"].First(&user)
 func Connect(mysqlConfigs []config.MysqlConfig) {
