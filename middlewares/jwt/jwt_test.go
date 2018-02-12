@@ -9,8 +9,7 @@ import (
 	"net/http/httptest"
 	"net/http"
 	"encoding/json"
-	//"fmt"
-	//"encoding/json"
+	"strings"
 )
 type CustomClaimsTest struct {
 	*CustomClaims
@@ -115,6 +114,12 @@ type Data struct {
 	Data string
 }
 
+type CustomClaim struct {
+	Id int
+	Name string
+}
+
+
 func TestJwtAuth (t *testing.T) {
 	token, err := jt.CreateToken(foreverClaims)
 
@@ -153,6 +158,12 @@ func TestJwtAuth (t *testing.T) {
 	repToken := &RepToken{}
 	json.Unmarshal([]byte(w1.Body.String()), repToken)
 	assert.Equal(t, token, repToken.Token)
+	parts := strings.Split(repToken.Token, ".")
+	customClaimsByte, err := jwt.DecodeSegment(parts[1])
+	assert.NoError(t, err)
+	customClaim := CustomClaim{}
+	json.Unmarshal(customClaimsByte, &customClaim)
+	assert.Equal(t, customClaim.Id, foreverClaims.ID)
 
 	w2 := httptest.NewRecorder()
 	req2, _ := http.NewRequest("GET", "/data", nil)
